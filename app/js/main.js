@@ -52,7 +52,20 @@ $('#tasks').on('click', '.complete', function (event) {
    taskToEdit.status = 'Open';
 
 
+  });
+
+$('#removeCompleted').on('click', function () {
+
+  storageBin = storageBin.map(function(x) {
+
+  if (x.status === 'Open') {
+    return x;
+  }
+  storageBin.push(x);
 });
+
+});
+
 
 
 
