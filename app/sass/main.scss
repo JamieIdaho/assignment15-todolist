@@ -1,4 +1,6 @@
 $font: 'Titillium Web', sans-serif;
+$orange: #FFA57A;
+$gray: #7F7D7B;
 
 .container {
   width: 300px;
@@ -7,18 +9,50 @@ $font: 'Titillium Web', sans-serif;
   margin: 0 auto;
   margin-top: 100px;
   font-family: $font;
+  border-radius: 5px;
+  background-color: $gray;
+}
+
+.listItem {
+ padding-left: 30px;
+ background-color: white;
+ position: relative;
+}
+
+.listItem::before {
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f0ad";
+  left: 7px;
+  margin-top: 3px;
+  color: $gray;
 }
 
 
 .complete {
   text-decoration: line-through;
+  // padding-left: 30px;
+  position: relative;
+}
+
+.complete::before {
+
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f000";
+  left: 7px;
+  margin-top: 3px;
+  color: $gray;
+
 }
 
 #tasks {
   list-style: none;
   padding-left: 0;
   li {
-    width: 300px;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 30px;
   }
 }
 
@@ -30,9 +64,44 @@ input {
   width: 300px;
   height: 40px;
   outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+
 }
 
 button {
   width: 300px;
   height: 40px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: $orange;
+  margin-top: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.count {
+  width: 400px;
+  height: 40px;
+  margin: 0 auto;
+  font-family: $font;
+  background-color: $orange;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 15px;
+  margin-bottom: 50px;
+}
+
+.count::before {
+  font-family: FontAwesome;
+  position: absolute;
+  content: "\f0ad";
+  left: 7px;
+  margin-top: 3px;
+  color: $gray;
+  font-size: 1.5em;
 }
