@@ -1,5 +1,28 @@
 .container {
-  padding: 50px; }
+  width: 300px;
+  padding: 50px;
+  border: 1px solid grey;
+  margin: 0 auto;
+  margin-top: 100px;
+  font-family: "Titillium Web", sans-serif; }
 
 .complete {
   text-decoration: line-through; }
+
+#tasks {
+  list-style: none;
+  padding-left: 0; }
+  #tasks li {
+    width: 300px; }
+
+#addTask {
+  width: 300px; }
+
+input {
+  width: 300px;
+  height: 40px;
+  outline: none; }
+
+button {
+  width: 300px;
+  height: 40px; }

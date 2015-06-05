@@ -54,6 +54,7 @@ $('#tasks').on('click', '.complete', function (event) {
 
   });
 
+
 $('#removeCompleted').on('click', function () {
 
   storageBin = storageBin.filter(function(x) {
@@ -62,16 +63,23 @@ $('#removeCompleted').on('click', function () {
       return x;
     }
   storageBin.push(x);
+
   });
 
-  console.log(storageBin);
+  $('#tasks').empty();
 
-  var taskText = $('#taskText').val();
-  var taskToEdit = _.find(storageBin, {task: taskText});
-  $('#tasks').append('<li>' + taskText + '</li>');
+  storageBin.forEach(function(x) {
+    $('#tasks').append('<li>' + x.task + '</li>');
+  });
 
 
-  // $('#tasks').append('<li>' + taskTesk + '</li>');
+});
+
+
+$('#clearAll').on('click', function () {
+
+  $('#tasks').empty();
+  storageBin = [];
 
 });
 
