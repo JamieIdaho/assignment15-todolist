@@ -1,3 +1,6 @@
+(function (){
+
+'use strict';
 
 
 //Todo blueprint
@@ -93,7 +96,7 @@ function counter(){
 }
 
 
-
+}());
 
 
 
