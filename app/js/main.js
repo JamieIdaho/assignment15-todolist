@@ -56,15 +56,26 @@ $('#tasks').on('click', '.complete', function (event) {
 
 $('#removeCompleted').on('click', function () {
 
-  storageBin = storageBin.map(function(x) {
+  storageBin = storageBin.filter(function(x) {
 
-  if (x.status === 'Open') {
-    return x;
-  }
+    if (x.status === 'Open') {
+      return x;
+    }
   storageBin.push(x);
-});
+  });
+
+  console.log(storageBin);
+
+  var taskText = $('#taskText').val();
+  var taskToEdit = _.find(storageBin, {task: taskText});
+  $('#tasks').append('<li>' + taskText + '</li>');
+
+
+  // $('#tasks').append('<li>' + taskTesk + '</li>');
 
 });
+
+
 
 
 
