@@ -77,6 +77,7 @@ $('#clearAll').on('click', function () {
 
   $('#tasks').empty();
   storageBin = [];
+  counter();
 
 });
 
