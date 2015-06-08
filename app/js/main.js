@@ -1,6 +1,6 @@
-(function (){
+// (function (){
 
-'use strict';
+// 'use strict';
 
 
 //Todo blueprint
@@ -9,6 +9,20 @@ var Todo = function (options) {
   this.task = args.task;
   this.status = 'Open';
 };
+
+var toggle = function(x) {
+  if (x.status === 'Open') {
+    x.status = 'Closed';
+  }
+  else if (x.status ==='Closed') {
+    x.status = 'Open';
+  }
+
+
+
+};
+
+Todo.prototype.toggle = toggle;
 
 //task list
 var storageBin= [];
@@ -38,7 +52,8 @@ $('#tasks').on('click', 'li', function (event) {
   $(this).addClass('complete');
   var tTask = $(this).text();
   var taskToEdit = _.find(storageBin, {task: tTask});
-  taskToEdit.status = 'Closed';
+
+  taskToEdit.toggle(taskToEdit);
   counter();
 
   });
@@ -49,6 +64,7 @@ $('#tasks').on('click', '.complete', function (event) {
    $(this).removeClass('complete');
    var tTask = $(this).text();
    var taskToEdit = _.find(storageBin, {task: tTask});
+
    taskToEdit.status = 'Open';
    counter();
 
@@ -90,13 +106,13 @@ function counter(){
     if (x.status === 'Open') {
       return totalCount++;
     }
-    storageBin.push(totalCount);
+    // storageBin.push(totalCount);
   });
   $('.number').html(totalCount);
 }
 
 
-}());
+// }());
 
 
 

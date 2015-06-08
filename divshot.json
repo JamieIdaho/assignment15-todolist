@@ -1,0 +1,6 @@
+{
+  "name": "jamie-tiy-todolist",
+  "root": "app",
+  "clean_urls": true,
+  "error_page": "error.html"
+}
