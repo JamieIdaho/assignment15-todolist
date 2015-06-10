@@ -1,12 +1,10 @@
 ## Welcome to My Repo
 
-Requirements
+This is a simple to-do list that lets you add an item, toggle the item between complete/incomplete, remove incomplete items and remove all items. It also has a counter function that displays how many to-do items are incomplete.
 
-I should be able to add a todo item
-I should be able to mark the todo item complete
-I should be able to toggle the todo item back to uncomplete
-I should be able to delete the todo item so it's not in view any more.
-Make sure your data matches your DOM at all times
+The most exciting part of the to-do list is that when an item is marked as complete, a martini glass appears!
+
+Lastly, the data matches the html at all times.
 
 
 

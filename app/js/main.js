@@ -54,7 +54,7 @@ $('#tasks').on('click', '.complete', function (event) {
 
   });
 
-
+//remove completed items from array and html
 $('#removeCompleted').on('click', function () {
 
   storageBin = storageBin.filter(function(x) {
@@ -75,7 +75,7 @@ $('#removeCompleted').on('click', function () {
 
 });
 
-
+//clear all items from array and html
 $('#clearAll').on('click', function () {
 
   $('#tasks').empty();
@@ -83,6 +83,8 @@ $('#clearAll').on('click', function () {
   counter();
 
 });
+
+//function that keeps count of incomplete to-do items
 
 function counter(){
   var totalCount = 0;
